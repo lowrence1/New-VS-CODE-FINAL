@@ -1,0 +1,300 @@
+// -------------------------------------------//
+
+.version {
+
+    background-color: #25252B;
+
+    .text {
+        text-align: center;
+
+        h6 {
+            color: white;
+
+            span {
+                color: white;
+            }
+        }
+
+        p {
+            color: white;
+            font-size: 1rem;
+        }
+
+        a {
+            color: #2267F2;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// _________________________//
+
+.banner {
+    background-color: #2C2C32;
+    text-align: center;
+
+    &__wrapper {
+        .banner__text {
+            color: #FFFFFF;
+            font-size: 1rem;
+            text-align: center;
+
+            h1 {
+                font-weight: 600;
+                font-size: 3rem;
+                text-align: center;
+                padding: 1.5rem;
+                line-height: 1;
+
+                span {
+                    font-weight: 100;
+                    color: #FFFFFF;
+                }
+            }
+
+            .free__text {
+                color: #C1CCCC;
+                text-align: center;
+                font-size: 1rem;
+            }
+
+            .download {
+                &__button {
+                    justify-content: center;
+                    margin: 0 auto;
+                    padding: 1rem;
+                    display: flex;
+                    gap: .6rem;
+                    cursor: pointer;
+
+                    button {
+                        background-color: #0066B8;
+                        color: #FFFFFF;
+                        padding: 1rem;
+                        font-size: 1.5rem;
+                    }
+
+                    p {
+                        color: #FFFFFF;
+                        display: block;
+                        font-size: 1.2rem;
+                    }
+
+                    button:hover {
+                        background-color: #034d8a;
+                    }
+
+                }
+
+
+            }
+
+            .web__text {
+                font-size: 1rem;
+                background-color: #25252B;
+                padding: .5rem;
+                margin: 0 auto;
+                color: gray;
+                max-width: 22rem;
+                position: relative;
+                z-index: 2;
+                cursor: pointer;
+
+                a {
+                    color: #2267F2;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+
+                p {
+                    margin-bottom: unset;
+                }
+
+
+            }
+
+            .Vscode__text {
+                padding: 1rem;
+                font-size: 1rem;
+                max-width: 17rem;
+                margin: 0 auto;
+
+                p {
+                    color: gray;
+                }
+
+                a {
+                    color: #2267F2;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+
+
+        }
+
+        .image {
+            img {
+                width: 0rem;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    @include mediaQuery($break-lg) {
+        &__wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+
+            .banner__text {
+
+                h1 {
+                    width: 30rem;
+
+                }
+            }
+
+            .image {
+                img {
+                    width: 60rem;
+                }
+            }
+
+        }
+
+    }
+}
+
+// ----------------SLIDER-------------------//
+
+.spider {
+    padding: 5rem 0;
+    background: #f5f5f5;
+
+    &__wrapper {
+        // margin-bottom: 3rem;
+        // padding: 5rem;
+
+
+        .spider__all {
+            display: block;
+            position: relative;
+
+
+            .spiderman {
+                margin: 0 5rem;
+                margin-bottom: 2rem;
+                display: flex;
+                gap: 2rem;
+
+
+                img {
+                    width: 7.2rem;
+                    height: 7.2rem;
+                    background-size: 100%;
+                    background-position: 50% 25%;
+                    border-radius: 50%;
+                }
+
+                .spider__list {
+                    text-align: justify;
+
+                    h4 {
+
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: space-between;
+
+                        span {
+                            &:hover {
+                                color: $clr-blue;
+                            }
+                        }
+
+                        i {
+                            color: gray;
+                        }
+                    }
+
+                    p {
+                        font-weight: 300;
+                        line-height: 1.8rem;
+                        color: gray;
+                        margin-top: 1rem;
+
+                        // text-align: justify;
+                        span {
+                            color: $clr-blue;
+                            cursor: pointer;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+
+                .spider__text {
+
+
+                    p {
+                        font-weight: 300;
+                        line-height: 1.8rem;
+                        color: gray;
+
+                    }
+                }
+
+                &__list {
+                    display: flex;
+
+
+                }
+
+            }
+
+        }
+
+        .tns-nav {
+            display: none;
+        }
+
+        .tns-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            width: 95vw;
+            top: 60%;
+            z-index: 999;
+
+            button {
+                background: none;
+                border: none;
+                font-size: 2rem;
+
+            }
+        }
+
+        @include mediaQuery(1024px) {
+            #tns1>.tns-item {
+                display: inline-flex;
+            }
+
+            .tns-controls {
+                max-width: 72%;
+                top: 80%;
+            }
+        }
+
+    }
+
+}

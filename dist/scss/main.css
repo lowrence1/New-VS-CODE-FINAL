@@ -1,0 +1,307 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(0, 0%, 18%);
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-family: "Poppins";
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+}
+
+body {
+  font-size: 1.6rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.version {
+  background-color: #25252B;
+}
+.version .text {
+  text-align: center;
+}
+.version .text h6 {
+  color: white;
+}
+.version .text h6 span {
+  color: white;
+}
+.version .text p {
+  color: white;
+  font-size: 1rem;
+}
+.version .text a {
+  color: #2267F2;
+}
+.version .text a:hover {
+  text-decoration: underline;
+}
+
+.banner {
+  background-color: #2C2C32;
+  text-align: center;
+}
+.banner__wrapper .banner__text {
+  color: #FFFFFF;
+  font-size: 1rem;
+  text-align: center;
+}
+.banner__wrapper .banner__text h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  text-align: center;
+  padding: 1.5rem;
+  line-height: 1;
+}
+.banner__wrapper .banner__text h1 span {
+  font-weight: 100;
+  color: #FFFFFF;
+}
+.banner__wrapper .banner__text .free__text {
+  color: #C1CCCC;
+  text-align: center;
+  font-size: 1rem;
+}
+.banner__wrapper .banner__text .download__button {
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+.banner__wrapper .banner__text .download__button button {
+  background-color: #0066B8;
+  color: #FFFFFF;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.banner__wrapper .banner__text .download__button p {
+  color: #FFFFFF;
+  display: block;
+  font-size: 1.2rem;
+}
+.banner__wrapper .banner__text .download__button button:hover {
+  background-color: #034d8a;
+}
+.banner__wrapper .banner__text .web__text {
+  font-size: 1rem;
+  background-color: #25252B;
+  padding: 0.5rem;
+  margin: 0 auto;
+  color: gray;
+  max-width: 22rem;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+.banner__wrapper .banner__text .web__text a {
+  color: #2267F2;
+}
+.banner__wrapper .banner__text .web__text a:hover {
+  text-decoration: underline;
+}
+.banner__wrapper .banner__text .web__text p {
+  margin-bottom: unset;
+}
+.banner__wrapper .banner__text .Vscode__text {
+  padding: 1rem;
+  font-size: 1rem;
+  max-width: 17rem;
+  margin: 0 auto;
+}
+.banner__wrapper .banner__text .Vscode__text p {
+  color: gray;
+}
+.banner__wrapper .banner__text .Vscode__text a {
+  color: #2267F2;
+}
+.banner__wrapper .banner__text .Vscode__text a:hover {
+  text-decoration: underline;
+}
+.banner__wrapper .image img {
+  width: 0rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1080px) {
+  .banner__wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .banner__wrapper .banner__text h1 {
+    width: 30rem;
+  }
+  .banner__wrapper .image img {
+    width: 60rem;
+  }
+}
+
+.spider {
+  padding: 5rem 0;
+  background: #f5f5f5;
+}
+.spider__wrapper .spider__all {
+  display: block;
+  position: relative;
+}
+.spider__wrapper .spider__all .spiderman {
+  margin: 0 5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+.spider__wrapper .spider__all .spiderman img {
+  width: 7.2rem;
+  height: 7.2rem;
+  background-size: 100%;
+  background-position: 50% 25%;
+  border-radius: 50%;
+}
+.spider__wrapper .spider__all .spiderman .spider__list {
+  text-align: justify;
+}
+.spider__wrapper .spider__all .spiderman .spider__list h4 {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.spider__wrapper .spider__all .spiderman .spider__list h4 span:hover {
+  color: hsl(209, 90%, 49%);
+}
+.spider__wrapper .spider__all .spiderman .spider__list h4 i {
+  color: gray;
+}
+.spider__wrapper .spider__all .spiderman .spider__list p {
+  font-weight: 300;
+  line-height: 1.8rem;
+  color: gray;
+  margin-top: 1rem;
+}
+.spider__wrapper .spider__all .spiderman .spider__list p span {
+  color: hsl(209, 90%, 49%);
+  cursor: pointer;
+}
+.spider__wrapper .spider__all .spiderman .spider__list p span:hover {
+  text-decoration: underline;
+}
+.spider__wrapper .spider__all .spiderman .spider__text p {
+  font-weight: 300;
+  line-height: 1.8rem;
+  color: gray;
+}
+.spider__wrapper .spider__all .spiderman__list {
+  display: flex;
+}
+.spider__wrapper .tns-nav {
+  display: none;
+}
+.spider__wrapper .tns-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 95vw;
+  top: 60%;
+  z-index: 999;
+}
+.spider__wrapper .tns-controls button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .spider__wrapper #tns1 > .tns-item {
+    display: inline-flex;
+  }
+  .spider__wrapper .tns-controls {
+    max-width: 72%;
+    top: 80%;
+  }
+}
+
+.header {
+  background: hsl(0, 0%, 18%);
+  position: relative;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .branding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header .branding img {
+  width: 3rem;
+}
+.header .branding h4 {
+  color: hsl(0, 0%, 100%);
+}
+.header .branding ul {
+  display: none;
+}
+.header__nav {
+  background: hsl(0, 0%, 18%);
+  position: absolute;
+  top: 6rem;
+  left: 0;
+  width: 100%;
+  max-height: 0rem;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+.header__nav.open {
+  max-height: 51rem;
+  transition: 0.5s ease;
+  overflow-y: scroll;
+}
+.header__nav ul li {
+  padding: 2rem;
+}
+.header__nav ul li a {
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem;
+}
+.header__nav ul li:hover {
+  cursor: pointer;
+}
+.header__nav .header__actions ul li:last-child {
+  background: blue;
+}
+.header__nav .header__actions ul li a {
+  font-size: 2rem;
+}
+.header .toggle__menu span {
+  width: 3rem;
+  height: 0.2rem;
+  background-color: hsl(0, 0%, 100%);
+  display: block;
+}
+.header .toggle__menu span:nth-child(2) {
+  margin: 0.5rem 0;
+}/*# sourceMappingURL=main.css.map */
