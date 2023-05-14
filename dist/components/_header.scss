@@ -1,6 +1,7 @@
 .header {
-    background: $clr-dark;
-    position: relative;
+    background-color: #2C2C32;
+    z-index: 999;
+    
 
     &__wrapper {
         display: flex;
@@ -8,80 +9,256 @@
         justify-content: space-between;
     }
 
+    position: relative;
+    position: fixed;
+    width: 100%;
+
     .branding {
         display: flex;
         align-items: center;
-        gap: 1rem;
+    }
 
-        img {
-            width: 3rem;
-        }
+    button {
+        margin-left: 10rem;
+    }
 
-        h4 {
-            color: $clr-light;
-        }
+    img {
+        width: 2.5rem;
+    }
 
-        ul {
-            display: none;
+    h3 {
+        color: $clr-light;
+        margin-left: 1rem;
+        font-size: 2rem;
+        font-weight: 100;
+        cursor: pointer;
+
+        span {
+            color: $clr-blue;
         }
     }
 
     &__nav {
-        background: $clr-dark;
         position: absolute;
-        top: 6rem;
-        left: 0;
+        background: rgb(255, 255, 255);
+        top: 5rem;
+        right: 0;
         width: 100%;
         max-height: 0rem;
-        // max-height: 51rem;
         overflow: hidden;
         transition: .5s ease;
+        z-index: 0;
+
+        ul {
+            display: block;
+            background-color: #2C2C32;
+
+            li {
+                padding: 1rem;
+                margin-left: .5rem;
+
+                a {
+                    text-decoration: none;
+                    color: $clr-light;
+                    font-size: 1.5rem;
+                }
+            }
+
+        }
 
         &.open {
-            max-height: 51rem;
+            max-height: 30rem;
+            transition: .5s ease;
+            overflow: auto;
+        }
+
+        .download {
+            background-color: #0066B8;
+
+            &:hover {
+                background-color: rgb(2, 59, 172);
+            }
+
+            a {
+                margin-left: 1rem;
+            }
+
+            i {
+                color: $clr-light;
+            }
+        }
+    }
+
+    &__nav2 {
+        position: absolute;
+        background: rgb(255, 255, 255);
+        top: 7rem;
+        right: 0;
+        max-height: 0rem;
+        overflow: hidden;
+        transition: .5s ease;
+        z-index: 0;
+
+        ul {
+            display: block;
+            background-color: #2C2C32;
+
+            li {
+                padding: 1rem;
+                margin-left: .5rem;
+
+                a {
+                    text-decoration: none;
+                    color: $clr-light;
+                    font-size: 1.8rem;
+                }
+            }
+
+        }
+
+        &.open {
+            max-height: 37rem;
             transition: .5s ease;
             overflow-y: scroll;
         }
 
-        ul {
-            li {
-                padding: 2rem;
+        .download {
+            background-color: #0066B8;
 
-                a {
-                    color: $clr-light ;
-                    font-size: 2rem;
-                }
-
-                &:hover {
-                    cursor: pointer;
-                }
+            a {
+                margin-left: 1rem;
             }
-        }
 
-        .header__actions {
-            ul {
-                li {
-                    &:last-child {
-                        background: blue;
-                    }
-
-                    a {
-                        font-size: 2rem;
-                    }
-                }
+            i {
+                color: $clr-light;
             }
         }
     }
 
     .toggle__menu {
+        display: block;
+
+        &:hover {
+            background-color: #2267F2;
+        }
+
+        padding: .5rem;
+
         span {
             width: 3rem;
-            height: .2rem;
+            height: .3rem;
             background-color: $clr-light;
             display: block;
+            margin-bottom: .5rem;
+            border-radius: 5rem;
+            transition: .5s ease;
+        }
+        &.open{
+            span{
+                &:first-child{
+                    transform: translate(0, 8px) rotate(225deg);
+                    transition: .5s ease;
+                }
+                &:nth-child(2){
+                    opacity: 0;
+                    transition: .5s ease;
+                }
+                &:last-child{
+                    transform: translate(0, -9px) rotate(-225deg);
+                    transition: .5s ease;
+                }
+            }
+        }
+    }
 
-            &:nth-child(2) {
-                margin: .5rem 0;
+    @include mediaQuery($break-lg) {
+        .toggle__menu {
+            display: none;
+        }
+
+        .branding {
+            margin-left: 12rem;
+        }
+
+        .container {
+            padding: 0;
+        }
+
+        &__nav2 {
+            position: static;
+            max-height: unset;
+            margin-left: 5rem;
+            display: flex;
+            background: none;
+
+            ul {
+                display: none;
+
+                &.download {
+                    display: block;
+                    
+                }
+            }
+
+            .input {
+                display: flex;
+                align-items: center;
+                background-color: #3D3D42;
+
+                &:hover {
+                    background-color: #a3a3a7;
+                    opacity: .5;
+                }
+
+                i {
+                    color: $clr-light;
+                    margin-right: .5rem;
+                }
+            }
+        }
+
+        &__nav {
+            position: unset;
+            width: unset;
+            height: unset;
+            max-height: fit-content;
+            display: flex;
+
+            ul {
+                display: flex;
+
+                li {
+                    a {
+                        font-size: 1.6rem;
+                        color: #A4A4A7;
+                    }
+
+                    &:hover {
+                        background: none;
+
+                        a {
+                            color: $clr-light;
+                        }
+                    }
+
+                    .download {
+                        ul {
+                            li {
+                                display: inline-flex;
+
+                            }
+                        }
+                    }
+                }
+
+                &.download {
+                    display: none;
+                }
+
+            }
+
+            li:last-child {
+                display: none;
             }
         }
     }
